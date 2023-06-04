@@ -1,3 +1,8 @@
+:root {
+  --color-dark: #111;
+  --color-light: #fff;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -11,14 +16,14 @@ html {
 body {
   font-family: system-ui;
   color-scheme: light dark;
-  color: #111;
-  background-color: #fff;
+  color: var(--color-dark, black);
+  background-color: var(--color-light, white);
   margin: 0;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    color: #fff;
-    background-color: #111;
+    color: var(--color-light, white);
+    background-color: var(--color-dark, black);
   }
 }
