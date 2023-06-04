@@ -1,35 +1,22 @@
 ---
-import "../styles/global.css";
-import BaseHead from "../components/BaseHead.astro";
-import MainContent from "../components/MainContent.astro";
-import Navigation from "../components/Navigation.astro";
-
+import DefaultPageLayout from "../layouts/DefaultPageLayout.astro";
 const pageTitle = "Bofællesskabet Væksthuset";
 ---
 
-<html lang="da">
-	<head>
-		<BaseHead title={pageTitle} />
-	</head>
-	<body>
-		<Navigation />
-		<MainContent>
-			<h1>{pageTitle}</h1>
-			<p>
-				Væksthuset er et bofællesskab med 16 andelsboliger og et
-				fælleshus. I bofællesskabet Væksthuset har vi separate
-				husstande, men deler vores smukke omgivelser og spiser sammen
-				fire dage om ugen.
-			</p>
-			<p>
-				På bofællesskabets fællesarealer er der bl.a. spisesal, køkken,
-				bordtennis, musikrum, gæsteværelse, sandkasse, legehus, gynger,
-				drivhus mm.
-			</p>
-			<p>
-				Bofællesskabet Væksthuset ligger på en smuk 8000 m2 stor grund
-				17 km fra Århus C. I bofællesskabet bor 24 voksne og 20 børn.
-			</p>
-		</MainContent>
-	</body>
-</html>
+<DefaultPageLayout title={pageTitle}>
+	<h1>{pageTitle}</h1>
+	<p>
+		Væksthuset er et bofællesskab med 16 andelsboliger og et fælleshus. I
+		bofællesskabet Væksthuset har vi separate husstande, men deler vores
+		smukke omgivelser og spiser sammen fire dage om ugen.
+	</p>
+	<p>
+		På bofællesskabets fællesarealer er der bl.a. spisesal, køkken,
+		bordtennis, musikrum, gæsteværelse, sandkasse, legehus, gynger, drivhus
+		mm.
+	</p>
+	<p>
+		Bofællesskabet Væksthuset ligger på en smuk 8000 m2 stor grund 17 km fra
+		Århus C. I bofællesskabet bor 24 voksne og 20 børn.
+	</p>
+</DefaultPageLayout>

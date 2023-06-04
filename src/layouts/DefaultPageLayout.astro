@@ -1,0 +1,27 @@
+---
+import "../styles/global.css";
+import BaseHead from "../components/BaseHead.astro";
+import Navigation from "../components/Navigation.astro";
+
+const title = Astro.props;
+---
+
+<style>
+    main {
+        margin: auto;
+        width: min(65ch, 100%);
+        padding-inline: 2rem;
+    }
+</style>
+
+<html lang="da">
+    <head>
+        <BaseHead title={title} />
+    </head>
+    <body>
+        <Navigation />
+        <main>
+            <slot />
+        </main>
+    </body>
+</html>
