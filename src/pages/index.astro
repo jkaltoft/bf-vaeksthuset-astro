@@ -1,15 +1,38 @@
 ---
+import "../styles/global.css";
+import MainContent from "../components/MainContent.astro";
+import Navigation from "../components/Navigation.astro";
+
+const pageTitle = "Bofællesskabet Væksthuset";
 ---
 
-<html lang="en">
+<html lang="da">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Navigation />
+		<MainContent>
+			<h1>{pageTitle}</h1>
+			<p>
+				Væksthuset er et bofællesskab med 16 andelsboliger og et
+				fælleshus. I bofællesskabet Væksthuset har vi separate
+				husstande, men deler vores smukke omgivelser og spiser sammen
+				fire dage om ugen.
+			</p>
+			<p>
+				På bofællesskabets fællesarealer er der bl.a. spisesal, køkken,
+				bordtennis, musikrum, gæsteværelse, sandkasse, legehus, gynger,
+				drivhus mm.
+			</p>
+			<p>
+				Bofællesskabet Væksthuset ligger på en smuk 8000 m2 stor grund
+				17 km fra Århus C. I bofællesskabet bor 24 voksne og 20 børn.
+			</p>
+		</MainContent>
 	</body>
 </html>

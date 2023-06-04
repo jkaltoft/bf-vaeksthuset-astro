@@ -1,0 +1,69 @@
+---
+import "../styles/global.css";
+import MainContent from "../components/MainContent.astro";
+import Navigation from "../components/Navigation.astro";
+
+const pageTitle = "Beboere i Bofællesskabet Væksthuset";
+---
+
+<html lang="da">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+	</head>
+	<body>
+		<Navigation />
+		<MainContent>
+			<h1>{pageTitle}</h1>
+			<p>
+				I øjeblikket er beboersammensætningen i Bofællesskabet
+				Væksthuset således:
+			</p>
+			<h2>20 børn og unge</h2>
+			<table>
+				<tr>
+					<td>0-2-årige:</td>
+					<td>4</td>
+				</tr>
+				<tr>
+					<td>3-6-årige:</td>
+					<td>7</td>
+				</tr>
+				<tr>
+					<td>7-11-årige:</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>12-15-årige:</td>
+					<td>4</td>
+				</tr>
+				<tr>
+					<td>16-20-årige:</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td colspan="2"
+						><strong>I alt 13 piger og 7 drenge</strong></td
+					>
+				</tr>
+			</table>
+			<h2>24 voksne</h2>
+			<p>
+				Der er 8 huse med én voksen og 8 huse med to voksne.<br />
+				<strong>I alt 15 kvinder og 9 mænd</strong><br />
+			</p>
+			<p>Der er 12 huse med hjemmeboende børn og 4 uden.</p>
+			<p>
+				Der er beboere fra mange forskellige erhverv, her er f.eks.
+				lærere, it-folk, pædagoger og socialrådgivere.
+			</p>
+			<p>
+				Aldersmæssigt er der mange voksne i 30'erne, men spredningen går
+				fra omkring 30 år til godt og vel 70 år.
+			</p>
+		</MainContent>
+	</body>
+</html>
