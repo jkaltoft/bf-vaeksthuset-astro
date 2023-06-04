@@ -1,5 +1,6 @@
 ---
 import "../../styles/global.css";
+import BaseHead from "../../components/BaseHead.astro";
 import MainContent from "../../components/MainContent.astro";
 import Navigation from "../../components/Navigation.astro";
 
@@ -8,11 +9,7 @@ const pageTitle = "Husene i Bofællesskabet Væksthuset";
 
 <html lang="da">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
+		<BaseHead title={pageTitle} />
 	</head>
 	<body>
 		<Navigation />
