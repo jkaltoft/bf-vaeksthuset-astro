@@ -23,6 +23,14 @@ const { title } = Astro.props.frontmatter || Astro.props;
         <slot />
       </main>
     </div>
+    <footer>
+      <div class="container">
+        <address>
+          <strong>Kontakt</strong>: Andelsboligforeningen Væksthuset •
+          Engskovvej 2 • 8541 Skødstrup • kontakt@bf-vaeksthuset.dk
+        </address>
+      </div>
+    </footer>
   </body>
 </html>
 
@@ -42,5 +50,15 @@ const { title } = Astro.props.frontmatter || Astro.props;
     margin: 0 auto;
     width: min(calc(92ch + 2rem), 100%);
     padding-inline: 2rem;
+  }
+
+  footer {
+    color: #66d866;
+    background-color: #060;
+    padding-block: 1rem;
+  }
+
+  address {
+    text-align: center;
   }
 </style>
