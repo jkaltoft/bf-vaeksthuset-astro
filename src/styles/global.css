@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
   scrollbar-gutter: stable;
+  background-color: #79A0E5;
 }
 
 *,
@@ -26,6 +27,10 @@ body {
   min-height: 100dvh;
   background-image: linear-gradient(#79A0E5, #B6CBEF);
   background-size: contain;
+}
+
+main p {
+  width: min(60ch, 100%);
 }
 
 /* .page-layout:has(nav ul) ul {

@@ -3,30 +3,40 @@
 ---
 
 <nav>
-  <ul>
+  <menu>
     <li>
       <a href="/">Forside</a>
     </li>
     <li>
-      <a href="/saadan-bor-vi/husene/">Husene</a>
+      <span>Sådan bor vi</span>
+      <menu>
+        <li>
+          <a href="/saadan-bor-vi/husene/">Husene</a>
+        </li>
+        <li>
+          <a href="/saadan-bor-vi/faelleshuset/">Fælleshuset</a>
+        </li>
+        <li>
+          <a href="/saadan-bor-vi/udendoers/">Udendørs</a>
+        </li>
+        <li>
+          <a href="/saadan-bor-vi/skoedstrup/">Skødstrup</a>
+        </li>
+      </menu>
     </li>
     <li>
-      <a href="/saadan-bor-vi/faelleshuset/">Fælleshuset</a>
-    </li>
-    <li>
-      <a href="/saadan-bor-vi/udendoers/">Udendørs</a>
-    </li>
-    <li>
-      <a href="/saadan-bor-vi/skoedstrup/">Skødstrup</a>
-    </li>
-    <li>
-      <a href="/faellesskabet/faellesspisning">Fællesspisning</a>
-    </li>
-    <li>
-      <a href="/faellesskabet/opgaver">Opgaver</a>
-    </li>
-    <li>
-      <a href="/faellesskabet/traditioner">Traditioner</a>
+      <span>Fællesskabet</span>
+      <menu>
+        <li>
+          <a href="/faellesskabet/faellesspisning">Fællesspisning</a>
+        </li>
+        <li>
+          <a href="/faellesskabet/opgaver">Opgaver</a>
+        </li>
+        <li>
+          <a href="/faellesskabet/traditioner">Traditioner</a>
+        </li>
+      </menu>
     </li>
     <li>
       <a href="/beboere/">Beboere</a>
@@ -37,41 +47,67 @@
     <li>
       <a href="/kontakt/">Kontakt</a>
     </li>
-    <li>
+    <!-- <li>
       <a href="/markdown/">Markdown</a>
     </li>
     <li>
       <a href="/mdx/">MDX</a>
-    </li>
-  </ul>
+    </li> -->
+  </menu>
 </nav>
 
 <style>
-  ul {
+  menu {
+    list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1px;
+    /* justify-content: center; */
+    /* background-color: #1576c9; */
+  }
+
+  menu:has(menu) {
+    position: relative;
+  }
+
+  menu menu {
+    display: none;
+    position: absolute;
     background-color: #1576c9;
   }
 
   li {
-    list-style-type: none;
+    /* flex: 1; */
     background-image: linear-gradient(#005094, #1576c9);
-    flex: 1;
+    color: #fff;
+  }
+  li:hover {
+    background-color: #1376c9;
+    background-image: none;
+
+    & menu {
+      display: flex;
+    }
   }
 
   a {
     display: block;
     padding: 0.5em 1em;
-    color: #fff;
     text-decoration: none;
+    color: inherit;
+  }
 
-    &:hover {
-      /* text-decoration: underline; */
-      background-color: #1376c9;
+  span:has(+ menu) {
+    display: block;
+    padding: 0.5em 1em;
+    cursor: default;
+
+    &::after {
+      content: "⏷";
+      margin-inline-start: 1ch;
     }
   }
 
