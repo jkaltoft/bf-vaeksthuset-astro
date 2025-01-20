@@ -22,9 +22,26 @@ body {
   margin: 0;
 }
 
+body {
+  min-height: 100dvh;
+  background-image: linear-gradient(#79A0E5, #B6CBEF);
+  background-size: contain;
+}
+
+/* .page-layout:has(nav ul) ul {
+  flex-direction: column;
+} */
+
+
 @media (prefers-color-scheme: dark) {
   body {
     color: var(--color-light, white);
     background-color: var(--color-dark, black);
+    
+  }
+
+  body {
+    /* background-image: linear-gradient(rgb(129 159 224), rgb(32, 79, 143)); */
+    background-image: linear-gradient(rgb(32, 79, 143), lch(20 30 270 / 1))
   }
 }

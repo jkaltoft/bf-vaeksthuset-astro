@@ -3,25 +3,44 @@ import "../styles/global.css";
 import BaseHead from "../components/BaseHead.astro";
 import Navigation from "../components/Navigation.astro";
 
+import { Image } from "astro:assets";
+import image from "../assets/logo.png";
+
 const { title } = Astro.props.frontmatter || Astro.props;
 ---
 
-<style>
-    main {
-        margin: auto;
-        width: min(65ch, 100%);
-        padding-inline: 2rem;
-    }
-</style>
-
 <html lang="da">
-    <head>
-        <BaseHead title={title} />
-    </head>
-    <body>
-        <Navigation />
-        <main>
-            <slot />
-        </main>
-    </body>
+  <head>
+    <BaseHead title={title} />
+  </head>
+  <body>
+    <div class="container">
+      <Image src={image} alt="" loading={"eager"} />
+    </div>
+    <div class="container page-layout">
+      <Navigation />
+      <main>
+        <slot />
+      </main>
+    </div>
+  </body>
 </html>
+
+<style>
+  /* main {
+    margin: 0 auto;
+    width: min(65ch, 100%);
+    padding-inline: 2rem;
+  } */
+
+  .page-layout {
+    /* display: flex; */
+    flex-direction: row;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: min(calc(92ch + 2rem), 100%);
+    padding-inline: 2rem;
+  }
+</style>
